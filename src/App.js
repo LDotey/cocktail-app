@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import NavBar from './NavBar';
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     fetch("http://localhost:3000/drinks")
     .then((resp) => resp.json())
     .then((data) => console.log(data))
+    
   }, [])
 
   const handleAddDrink = (newDrink) => {
@@ -20,7 +22,9 @@ function App() {
       <hr/>
       A B C Drinkie-poos. 
       <hr/>
-
+      <NavBar/>
+      {/* <CocktailList/>
+      <CocktailForm/> */}
     </div>
   );
 }
