@@ -1,5 +1,40 @@
 .App {
   text-align: center;
+  padding: 50px;
+}
+
+.list-view {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  
+}
+
+.favourites-view {
+  display: flex-end;
+  text-align: right;
+  gap: 10px;
+}
+
+.detail-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-view-content {
+  background: pink;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  
 }
 
 /* .App-logo {

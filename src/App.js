@@ -1,14 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import NavBar from './NavBar';
+import CocktailList from './CocktailList';
 import './App.css';
+import FavouritesList from './FavouritesList';
 
 function App() {
   const [drinks, setDrinks] = useState([])
 
+  const [showFavourites, setShowFavourites] = useState(false)
+
+  function toggleFavourites () {
+    setShowFavourites (prevShowFavourites => !prevShowFavourites)
+  }
+
   useEffect(() => {
     fetch("http://localhost:3000/drinks")
     .then((resp) => resp.json())
-    .then((data) => console.log(data))
+    .then((data) => setDrinks(data))
     
   }, [])
 
@@ -22,9 +30,11 @@ function App() {
       <hr/>
       A B C Drinkie-poos. 
       <hr/>
-      <NavBar/>
-      {/* <CocktailList/>
-      <CocktailForm/> */}
+      <NavBar onFavouritesClick={toggleFavourites}/>
+      <CocktailList drinks={drinks} setDrinks={setDrinks}/>
+      {showFavourites && <FavouritesList drinks={drinks} />}
+      {/* <FavouritesList drinks={drinks}/> */}
+      {/* <CocktailForm/> */}
     </div>
   );
 }
