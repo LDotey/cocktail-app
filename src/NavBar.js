@@ -1,10 +1,10 @@
 import React from "react";
 
-function NavBar ({onFavouritesClick}) {
+function NavBar ({onFavouritesClick, onFormClick}) {
     return (
         <nav>
             <button onClick={onFavouritesClick}>My Favourites</button>
-            <button>Make a Cocktail</button>
+            <button onClick={onFormClick}>Make a Cocktail</button>
         </nav>
     )
 }

@@ -3,11 +3,18 @@ import NavBar from './NavBar';
 import CocktailList from './CocktailList';
 import './App.css';
 import FavouritesList from './FavouritesList';
+import CocktailForm from './CocktailForm';
 
 function App() {
   const [drinks, setDrinks] = useState([])
 
   const [showFavourites, setShowFavourites] = useState(false)
+
+  const [showForm, setShowForm] = useState()
+
+  function toggleForm () {
+    setShowForm(prevShowForm => !prevShowForm)
+  }
 
   function toggleFavourites () {
     setShowFavourites (prevShowFavourites => !prevShowFavourites)
@@ -30,11 +37,15 @@ function App() {
       <hr/>
       A B C Drinkie-poos. 
       <hr/>
-      <NavBar onFavouritesClick={toggleFavourites}/>
-      <CocktailList drinks={drinks} setDrinks={setDrinks}/>
+      <NavBar 
+      onFavouritesClick={toggleFavourites} 
+      onFormClick={toggleForm}/>
+      <CocktailList 
+      drinks={drinks} 
+      setDrinks={setDrinks}/>
       {showFavourites && <FavouritesList drinks={drinks} />}
       {/* <FavouritesList drinks={drinks}/> */}
-      {/* <CocktailForm/> */}
+      {showForm && <CocktailForm/>}
     </div>
   );
 }
