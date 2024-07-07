@@ -33,10 +33,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <hr/>
+    <div >
+      {/* <hr/>
       A B C Drinkie-poos. 
-      <hr/>
+      <hr/> */}
       <NavBar 
       onFavouritesClick={toggleFavourites} 
       onFormClick={toggleForm}/>
@@ -45,7 +45,7 @@ function App() {
       setDrinks={setDrinks}/>
       {showFavourites && <FavouritesList drinks={drinks} />}
       {/* <FavouritesList drinks={drinks}/> */}
-      {showForm && <CocktailForm/>}
+      {showForm && <CocktailForm drinks={drinks} setDrinks={setDrinks}/>}
     </div>
   );
 }

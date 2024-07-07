@@ -1,55 +1,76 @@
 {
   "drinks": [
-  {
-  "id": "1",
-  "Favourited": false,
-  "Name": "A1",
-  "Glass": "Cocktail glass",
-  "Instructions": "Pour all ingredients into a cocktail shaker, mix and serve over ice into a chilled glass.",
-  "Ingredient1": "1 3/4 shot Gin",
-  "Ingredient2": "1 Shot Grand Marnier",
-  "Ingredient3": "1/4 Shot Lemon Juice",
-  "Ingredient4": "1/8 Shot Grenadine"  
-  },
-  {
-  "id": "2",
-  "Favourited": false,
-  "Name": "ABC",
-  "Glass": "Shot glass",
-  "Instructions": "Layered in a shot glass.",
-  "DrinkThumb": "https://www.thecocktaildb.com/images/media/drink/tqpvqp1472668328.jpg",
-  "Ingredient1": "1/3 Amaretto",
-  "Ingredient2": "1/3 Baileys irish cream",
-  "Ingredient3": "1/3 Cognac"
-  },
-  {
-  "id": "3",
-  "Favourited": false,
-  "Name": "Ace",
-  "Glass": "Martini Glass",
-  "Instructions": "Shake all the ingredients in a cocktail shaker and ice then strain in a cold glass.",
-  "DrinkThumb": "https://www.thecocktaildb.com/images/media/drink/l3cd7f1504818306.jpg",
-  "Ingredient1": "2 shots Gin ",
-  "Ingredient2": "1/2 shot Grenadine ",
-  "Ingredient3": "1/2 shot Heavy cream ",
-  "Ingredient4": "1/2 shot Milk ",
-  "Ingredient5": "1/2 fresh Egg White "
-  },
-  {
-  "id": "4",
-  "Favourited": false,
-  "Name": "Boxcar",
-  "Glass": "Whiskey sour glass",
-  "Instructions": "In a shaker half-filled with ice cubes, combine all of the ingredients. Shake well. Strain into a sour glass.",
-  "DrinkThumb": "https://www.thecocktaildb.com/images/media/drink/pwgtpa1504366376.jpg",
-  "Ingredient1": "1 1/2 oz Gin ",
-  "Ingredient2": "1 oz Triple sec ",
-  "Ingredient3": "1 tsp Lemon juice ",
-  "Ingredient4": "1/2 tsp Grenadine ",
-  "Ingredient5": "Egg white "
-  },
-  {}
-
-
-]
+    {
+      "id": "1",
+      "Favourited": false,
+      "Name": "A1",
+      "Glass": "Cocktail glass",
+      "Instructions": "Pour all ingredients into a cocktail shaker, mix and serve over ice into a chilled glass.",
+      "Ingredient1": "1 3/4 shot Gin",
+      "Ingredient2": "1 Shot Grand Marnier",
+      "Ingredient3": "1/4 Shot Lemon Juice",
+      "Ingredient4": "1/8 Shot Grenadine"
+    },
+    {
+      "id": "2",
+      "Favourited": false,
+      "Name": "ABC",
+      "Glass": "Shot glass",
+      "Instructions": "Layered in a shot glass.",
+      "DrinkThumb": "https://www.thecocktaildb.com/images/media/drink/tqpvqp1472668328.jpg",
+      "Ingredient1": "1/3 Amaretto",
+      "Ingredient2": "1/3 Baileys irish cream",
+      "Ingredient3": "1/3 Cognac"
+    },
+    {
+      "id": "3",
+      "Favourited": false,
+      "Name": "Ace",
+      "Glass": "Martini Glass",
+      "Instructions": "Shake all the ingredients in a cocktail shaker and ice then strain in a cold glass.",
+      "DrinkThumb": "https://www.thecocktaildb.com/images/media/drink/l3cd7f1504818306.jpg",
+      "Ingredient1": "2 shots Gin ",
+      "Ingredient2": "1/2 shot Grenadine ",
+      "Ingredient3": "1/2 shot Heavy cream ",
+      "Ingredient4": "1/2 shot Milk ",
+      "Ingredient5": "1/2 fresh Egg White "
+    },
+    {
+      "id": "4",
+      "Favourited": false,
+      "Name": "Boxcar",
+      "Glass": "Whiskey sour glass",
+      "Instructions": "In a shaker half-filled with ice cubes, combine all of the ingredients. Shake well. Strain into a sour glass.",
+      "DrinkThumb": "https://www.thecocktaildb.com/images/media/drink/pwgtpa1504366376.jpg",
+      "Ingredient1": "1 1/2 oz Gin ",
+      "Ingredient2": "1 oz Triple sec ",
+      "Ingredient3": "1 tsp Lemon juice ",
+      "Ingredient4": "1/2 tsp Grenadine ",
+      "Ingredient5": "Egg white "
+    },
+    {
+      "id": "5",
+      "Favourited": false,
+      "Name": "paloma",
+      "Glass": "any",
+      "Instructions": "",
+      "Ingredient1": "",
+      "Ingredient2": "",
+      "Ingredient3": "",
+      "Ingredient4": "",
+      "Ingredient5": ""
+    },
+    {
+      "id": "6",
+      "Favourited": false,
+      "Name": "margarita",
+      "Glass": "big",
+      "Instructions": "",
+      "Ingredient1": "",
+      "Ingredient2": "",
+      "Ingredient3": "",
+      "Ingredient4": "",
+      "Ingredient5": ""
+    }
+  ]
 }

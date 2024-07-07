@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-function CocktailForm() {
+function CocktailForm({drinks, setDrinks}) {
     const [formData, setFormData] = useState({
-        id: 0,
+        id: "",
         Favourited: false,
         Name: "",
         Glass: "",
@@ -18,16 +18,54 @@ function CocktailForm() {
         setFormData({...formData, 
             [event.target.name]: event.target.value
         });
-
     }
 
     function handleSubmit(event){
         event.preventDefault();
-        console.log(formData)
+
+        const newId = (drinks.length +1).toString()
+
+        const newDrink = {...formData, id: newId}
+        console.log(newDrink)
+
+        // setDrinks([...drinks, newDrink])
+
+        setFormData({
+            id: "",
+            Favourited: false,
+            Name: "",
+            Glass: "",
+            Instructions: "",
+            Ingredient1: "",
+            Ingredient2: "",
+            Ingredient3: "",
+            Ingredient4: "",
+            Ingredient5: "",
+        })
+
+        fetch ("http://localhost:3000/drinks", {
+            method: "POST",
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(newDrink)
+        })
+        .then((resp) => resp.json())
+        .then((newDrink) => setDrinks(prevDrinks => [...prevDrinks, newDrink]))
+
+    }
+
+    const newForm = {
+        Name: formData.Name,
+        Glass: formData.Glass,
+        Ingredient1: formData.Ingredient1,
+        Ingredient2: formData.Ingredient2,
+        Ingredient3: formData.Ingredient3,
+        Ingredient4: formData.Ingredient4,
+        Ingredient5: formData.Ingredient5,
+        Instructions: formData.Instructions
 
     }
     return(
-        <section>
+        <section className="form-view">
             <h2>Make A Cocktail</h2>
             <form onSubmit={handleSubmit}>
                 <label>

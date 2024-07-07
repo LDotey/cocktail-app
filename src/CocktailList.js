@@ -29,7 +29,7 @@ function CocktailList({drinks, setDrinks}) {
     }
 
     return (
-        <section className="list-view">
+        <div className="body">
             <ul>
                 {drinks.map((drink) => (
                     <CocktailItem
@@ -46,7 +46,7 @@ function CocktailList({drinks, setDrinks}) {
         onClose={closeDetailView} 
         onAddToFavourites={handleAddToFavourites}/>
       )}
-        </section>
+        </div>
     )
 
 }
