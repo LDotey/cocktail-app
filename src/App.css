@@ -23,7 +23,7 @@ body{
   height:100%;
   background-color: lightgreen;
   position:absolute;
-  top: 250px; left: 0;
+  /* top: 257.75px; left: 0; */
   
 }
 .style{
@@ -72,10 +72,7 @@ body{
   text-align: center;
   flex-direction: column;
   width: 50%;
-  padding: 10px;
   padding-left: 25%; 
-
-  /* justify-content: flex-end; */
   position:absolute;
   top: 257.75px; right: 0;
 
@@ -97,7 +94,7 @@ label {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 10px;
   /* padding-left: 20%; */
 }
 
@@ -107,6 +104,8 @@ input{
 
 button{
   font-family: 'Trebuchet MS',  'Lucida Sans', sans-serif;
+  gap: 10px;
+  row-gap: 15px;
 }
 
 

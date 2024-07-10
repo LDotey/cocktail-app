@@ -6,8 +6,8 @@ function NavBar ({onFavouritesClick, onFormClick}) {
              <hr class="style"/>
             <h1>  A B C Drinkie-poos. </h1>
             <hr class="style"/>
-            <button style={{backgroundcolor:"blue"}} onClick={onFavouritesClick}>My Favourites</button>
-            <button color="orange"onClick={onFormClick}>Make a Cocktail</button>
+            <button onClick={onFavouritesClick}>My Favourites</button>
+            <button onClick={onFormClick}>Make a Cocktail</button>
         </nav>
     )
 }
