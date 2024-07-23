@@ -3,19 +3,21 @@ import { NavLink } from "react-router-dom";
 
 function NavBar ({onFavouritesClick, onFormClick}) {
     return (
-        <nav>
+        
+        <nav className="header">
             <NavLink
-            to="/"
-            ></NavLink>
+            to="/" exact
+            > </NavLink>
+            
             <NavLink
             to="/cocktails"
-            > Browse Cocktails</NavLink>
+            className="link"> Browse Cocktails</NavLink>
             <NavLink
             to="/favourites"
-            >Favourites List</NavLink>
+            className="link">Favourites List</NavLink>
             <NavLink
             to="/form"
-            >Create a Cocktail</NavLink>
+            className="link">Create a Cocktail</NavLink>
 
         </nav>
 

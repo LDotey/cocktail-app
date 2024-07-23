@@ -4,12 +4,14 @@ import CocktailList from './CocktailList';
 import './App.css';
 import FavouritesList from './FavouritesList';
 import CocktailForm from './CocktailForm';
-import { Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [drinks, setDrinks] = useState([])
   const [showFavourites, setShowFavourites] = useState(false)
   const [showForm, setShowForm] = useState()
+
+  console.log(drinks)
 
 
   function toggleForm () {
@@ -20,20 +22,52 @@ function App() {
     setShowFavourites (prevShowFavourites => !prevShowFavourites)
   }
 
+ 
+
   useEffect(() => {
     fetch("http://localhost:3000/drinks")
     .then((resp) => resp.json())
     .then((data) => setDrinks(data))
-    
-  }, [])
+    .catch((error) => console.error('Error fetching drinks:', error));
 
+    console.log(drinks)
+  }, [])
+  
   return (
-    <>
-    <header>
-      <NavBar/>
-    </header>
-    <Outlet/>
-    </>
+    
+    <div className="App">
+      <header>
+      <hr className='style'/>A B C Drinkie-poos<hr className='style'/>
+        <NavBar 
+          onFavouritesClick={toggleFavourites} 
+          onFormClick={toggleForm}
+        />
+      </header>
+      <Routes>
+        <Route path="/cocktails" element={<CocktailList drinks={drinks} setDrinks={setDrinks} />} />
+        <Route path="/favourites" element={<FavouritesList drinks={drinks} />} />
+        <Route path="/form" element={<CocktailForm drinks={drinks} setDrinks={setDrinks} />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+  // return (
+  //   <>
+  //   <header>
+  //     <NavBar/>
+  //   </header>
+  //   <Outlet context={drinks}/>
+
+  //   </>
 
     // <div >
     //   <NavBar 
@@ -46,7 +80,7 @@ function App() {
     //   {showFavourites && <FavouritesList drinks={drinks}/>}
     //   {showForm && <CocktailForm drinks={drinks} setDrinks={setDrinks}/>}
     // </div>
-  );
-}
+//   );
+// }
 
-export default App;
+// export default App;

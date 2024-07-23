@@ -3,12 +3,21 @@ body{
   background-color: deepskyblue;
 }
 
+.header {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.link {
+  color: yellow
+}
+
 .App {
   text-align: center;
   padding: 50px;
   font-weight: bold;
   font-kerning: 100;
-  color: lightpink;
+  color: gold;
   font-size: x-large;
   background-color: tomato;
 }
@@ -17,13 +26,13 @@ body{
   display: flex;
   text-align: left;
   font-size: larger;
-  
+  color:forestgreen;
   font-weight:100;
   width: 50%;
   height:100%;
   background-color: lightgreen;
-  position:absolute;
-  /* top: 257.75px; left: 0; */
+  position:fixed;
+  top: 280px; left: 0;
   
 }
 .style{
@@ -35,6 +44,7 @@ body{
 .favourites-view {
   display: flex-end;
   text-align: right;
+  color:blue;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -59,6 +69,8 @@ body{
 
 .detail-view-content {
   background: pink;
+  color:black;
+  font-size: large;
   padding: 20px;
   border-radius: 5px;
   max-width: 400px;
@@ -68,13 +80,15 @@ body{
 
 
 .form-view {
+  background-color: aquamarine;
   display: flex;
   text-align: center;
   flex-direction: column;
   width: 50%;
-  padding-left: 25%; 
-  position:absolute;
-  top: 257.75px; right: 0;
+  padding-left: 5%; 
+  padding-top: 1%;
+  position: absolute;
+  top: 300px; right: 10px;
 
 }
 
@@ -85,8 +99,8 @@ section {
   flex-direction: column;
   width: 50%;
   padding-left: 25%; 
-  /* padding-right: 2%;
-  padding-top: 10%;  */
+  padding-right: 2%;
+  padding-top: 10%; 
 
 
 }

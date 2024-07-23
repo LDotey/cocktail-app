@@ -3,7 +3,8 @@ import CocktailItem from "./CocktailItem"
 import CocktailDetailView from "./CocktailDetailView";
 
 function CocktailList({drinks, setDrinks}) {
-    console.log("CocktailList drinks:", drinks);
+  
+    console.log(drinks)
 
     const [selectedDrink, setSelectedDrink] = useState(null)
 
@@ -31,6 +32,7 @@ function CocktailList({drinks, setDrinks}) {
     return (
         <div className="body">
             <ul>
+               
                 {drinks.map((drink) => (
                     <CocktailItem
                     key={drink.id}
@@ -52,3 +54,17 @@ function CocktailList({drinks, setDrinks}) {
 }
 
 export default CocktailList;
+
+
+ {/* <Outlet context={drinks}/>
+                {drinksList} */}
+
+  // const drinks = useOutletContext();
+    // const drinksList = drinks.map((drink) => (
+    //     <CocktailItem
+    //                 key={drink.id}
+    //                 drink={drink}
+    //                 setDrinks={setDrinks}
+    //                 onClick={() => handleDetailView(drink)}
+    //                 />
+    // ))
