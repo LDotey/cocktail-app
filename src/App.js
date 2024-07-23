@@ -4,7 +4,7 @@ import CocktailList from './CocktailList';
 import './App.css';
 import FavouritesList from './FavouritesList';
 import CocktailForm from './CocktailForm';
-import CocktailDetailView from './CocktailDetailView';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [drinks, setDrinks] = useState([])
@@ -20,8 +20,6 @@ function App() {
     setShowFavourites (prevShowFavourites => !prevShowFavourites)
   }
 
-
-
   useEffect(() => {
     fetch("http://localhost:3000/drinks")
     .then((resp) => resp.json())
@@ -30,18 +28,24 @@ function App() {
   }, [])
 
   return (
-    <div >
-      <NavBar 
-      onFavouritesClick={toggleFavourites} 
-      onFormClick={toggleForm}/>
-      <CocktailList 
-      drinks={drinks} 
-      setDrinks={setDrinks}
-      />
-      {showFavourites && <FavouritesList drinks={drinks} handleDetailView={(handleDetailView)}
-      />}
-      {showForm && <CocktailForm drinks={drinks} setDrinks={setDrinks}/>}
-    </div>
+    <>
+    <header>
+      <NavBar/>
+    </header>
+    <Outlet/>
+    </>
+
+    // <div >
+    //   <NavBar 
+    //   onFavouritesClick={toggleFavourites} 
+    //   onFormClick={toggleForm}/>
+    //   <CocktailList 
+    //   drinks={drinks} 
+    //   setDrinks={setDrinks}
+    //   />
+    //   {showFavourites && <FavouritesList drinks={drinks}/>}
+    //   {showForm && <CocktailForm drinks={drinks} setDrinks={setDrinks}/>}
+    // </div>
   );
 }
 
