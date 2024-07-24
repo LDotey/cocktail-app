@@ -5,11 +5,12 @@ body{
 
 .header {
   display:flex;
+  align-content: center;
   justify-content: space-evenly;
 }
 
 .link {
-  color: yellow
+  color: gold;
 }
 
 .App {
@@ -52,7 +53,7 @@ body{
   padding: 10px;
   justify-content: flex-end;
   position:absolute;
-  top: 257.75px; right: 0;
+  top: 257.75px; right: 100px;
 }
 
 .detail-view {
@@ -81,6 +82,7 @@ body{
 
 .form-view {
   background-color: aquamarine;
+  color:deepskyblue;
   display: flex;
   text-align: center;
   flex-direction: column;

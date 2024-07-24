@@ -21,14 +21,6 @@ function NavBar ({onFavouritesClick, onFormClick}) {
 
         </nav>
 
-
-        // <nav className="App">
-        //      <hr className="style"/>
-        //     <h1>  A B C Drinkie-poos. </h1>
-        //     <hr className="style"/>
-        //     <button onClick={onFavouritesClick}>My Favourites</button>
-        //     <button onClick={onFormClick}>Make a Cocktail</button>
-        // </nav>
     )
 }
 
