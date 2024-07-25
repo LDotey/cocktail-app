@@ -16,13 +16,13 @@ function App() {
   console.log(drinks)
 
 
-  function toggleForm () {
-    setShowForm(prevShowForm => !prevShowForm)
-  }
+  // function toggleForm () {
+  //   setShowForm(prevShowForm => !prevShowForm)
+  // }
 
-  function toggleFavourites () {
-    setShowFavourites (prevShowFavourites => !prevShowFavourites)
-  }
+  // function toggleFavourites () {
+  //   setShowFavourites (prevShowFavourites => !prevShowFavourites)
+  // }
 
   function handleAddToFavourites(){
         setDrinks((prevDrinks) => {
@@ -36,6 +36,7 @@ function App() {
         setSelectedDrink(null);
 
     }
+   
  
 
   useEffect(() => {
@@ -53,12 +54,17 @@ function App() {
       <header>
       <hr className='style'/>A B C Drinkie-poos<hr className='style'/>
         <NavBar 
-          onFavouritesClick={toggleFavourites} 
-          onFormClick={toggleForm}
+          // onFavouritesClick={toggleFavourites} 
+          // onFormClick={toggleForm}
         />
       </header>
       <Routes>
-        <Route path="/cocktails" element={<CocktailList drinks={drinks} setDrinks={setDrinks} />} />
+        <Route path="/cocktails" element={
+        <CocktailList 
+        drinks={drinks} 
+        setDrinks={setDrinks} 
+        handleAddToFavourites={handleAddToFavourites}
+        />} />
         <Route path="/favourites" element={<FavouritesList drinks={drinks} />} />
         <Route path="/form" element={<CocktailForm drinks={drinks} setDrinks={setDrinks} />} />
       </Routes>
