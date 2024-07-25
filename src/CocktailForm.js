@@ -2,7 +2,6 @@ import React, {useState} from "react";
 
 function CocktailForm({drinks, setDrinks}) {
     const [formData, setFormData] = useState({
-        id: "",
         Favourited: false,
         Name: "",
         Glass: "",
@@ -23,15 +22,14 @@ function CocktailForm({drinks, setDrinks}) {
     function handleSubmit(event){
         event.preventDefault();
 
-        const newId = (drinks.length +1).toString()
+        // const newId = (drinks.length +1).toString()
 
-        const newDrink = {...formData, id: newId}
+        const newDrink = {...formData, }
         console.log(newDrink)
 
         // setDrinks([...drinks, newDrink])
 
         setFormData({
-            id: "",
             Favourited: false,
             Name: "",
             Glass: "",

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import CocktailItem from "./CocktailItem"
-import CocktailDetailView from "./CocktailDetailView";
+import CocktailDetailView from "./CocktailDetailView"
 
 function CocktailList({drinks, setDrinks}) {
   
@@ -48,6 +48,8 @@ function CocktailList({drinks, setDrinks}) {
         onClose={closeDetailView} 
         onAddToFavourites={handleAddToFavourites}/>
       )}
+      
+     
         </div>
     )
 

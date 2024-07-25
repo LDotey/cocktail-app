@@ -1,7 +1,8 @@
 import React from "react";
 import CocktailItem from "./CocktailItem";
 
-function FavouritesList({drinks, handleDetailView}) {
+function FavouritesList({drinks, setDrinks, handleDetailView}) {
+    console.log(handleDetailView)
     const favouritedDrinks = drinks.filter(drink => drink.Favourited)
     return (
         <section className="favourites-view">
@@ -11,6 +12,7 @@ function FavouritesList({drinks, handleDetailView}) {
                     <CocktailItem
                     key={drink.id}
                     drink={drink}
+                    setDrinks={setDrinks}
                     onClick={() => handleDetailView(drink)}/>
                 ))}
             </ul>
