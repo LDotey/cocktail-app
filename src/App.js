@@ -8,6 +8,8 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [drinks, setDrinks] = useState([])
+  const [selectedDrink, setSelectedDrink] = useState(null)
+
   const [showFavourites, setShowFavourites] = useState(false)
   const [showForm, setShowForm] = useState()
 
@@ -22,6 +24,18 @@ function App() {
     setShowFavourites (prevShowFavourites => !prevShowFavourites)
   }
 
+  function handleAddToFavourites(){
+        setDrinks((prevDrinks) => {
+            return prevDrinks.map((drink) => {
+                if (drink.id === selectedDrink.id) {
+                    return {...drink, Favourited:true };
+                }
+                return drink;
+            });
+        });
+        setSelectedDrink(null);
+
+    }
  
 
   useEffect(() => {

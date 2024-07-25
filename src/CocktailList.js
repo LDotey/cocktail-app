@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import CocktailItem from "./CocktailItem"
 import CocktailDetailView from "./CocktailDetailView"
 
-function CocktailList({drinks, setDrinks}) {
+function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handleAddToFavourites}) {
   
     console.log(drinks)
 
-    const [selectedDrink, setSelectedDrink] = useState(null)
+    // const [selectedDrink, setSelectedDrink] = useState(null)
 
     function handleDetailView(drink) {
         setSelectedDrink(drink);
@@ -16,18 +16,18 @@ function CocktailList({drinks, setDrinks}) {
         setSelectedDrink(null);
     }
 
-    function handleAddToFavourites(){
-        setDrinks((prevDrinks) => {
-            return prevDrinks.map((drink) => {
-                if (drink.id === selectedDrink.id) {
-                    return {...drink, Favourited:true };
-                }
-                return drink;
-            });
-        });
-        setSelectedDrink(null);
+    // function handleAddToFavourites(){
+    //     setDrinks((prevDrinks) => {
+    //         return prevDrinks.map((drink) => {
+    //             if (drink.id === selectedDrink.id) {
+    //                 return {...drink, Favourited:true };
+    //             }
+    //             return drink;
+    //         });
+    //     });
+    //     setSelectedDrink(null);
 
-    }
+    // }
 
     return (
         <div className="body">
