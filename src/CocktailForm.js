@@ -24,8 +24,8 @@ function CocktailForm({drinks, setDrinks}) {
 
         // const newId = (drinks.length +1).toString()
 
-        const newDrink = {...formData, }
-        console.log(newDrink)
+        // const newDrink = {...formData, }
+        // console.log(newDrink)
 
         // setDrinks([...drinks, newDrink])
 
@@ -45,7 +45,7 @@ function CocktailForm({drinks, setDrinks}) {
         fetch ("http://localhost:3000/drinks", {
             method: "POST",
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(newDrink)
+            body: JSON.stringify(formData)
         })
         .then((resp) => resp.json())
         .then((newDrink) => setDrinks(prevDrinks => [...prevDrinks, newDrink]))

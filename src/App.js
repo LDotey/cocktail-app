@@ -9,12 +9,10 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   const [drinks, setDrinks] = useState([])
   const [selectedDrink, setSelectedDrink] = useState(null)
-console.log(selectedDrink)
-  const [showFavourites, setShowFavourites] = useState(false)
-  const [showForm, setShowForm] = useState()
 
-  console.log(drinks)
 
+  // const [showFavourites, setShowFavourites] = useState(false)
+  // const [showForm, setShowForm] = useState()
 
   // function toggleForm () {
   //   setShowForm(prevShowForm => !prevShowForm)
@@ -23,6 +21,7 @@ console.log(selectedDrink)
   // function toggleFavourites () {
   //   setShowFavourites (prevShowFavourites => !prevShowFavourites)
   // }
+
 
   function handleAddToFavourites(){
         setDrinks((prevDrinks) => {
@@ -43,15 +42,13 @@ console.log(selectedDrink)
       setSelectedDrink(null);
   }
    
- 
-
   useEffect(() => {
     fetch("http://localhost:3000/drinks")
     .then((resp) => resp.json())
     .then((data) => setDrinks(data))
     .catch((error) => console.error('Error fetching drinks:', error));
 
-    console.log(drinks)
+    
   }, [])
   
   return (

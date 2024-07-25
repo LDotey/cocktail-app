@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import CocktailItem from "./CocktailItem"
 import CocktailDetailView from "./CocktailDetailView"
 
-function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handleAddToFavourites, handleDetailView, closeDetailView}) {
+function CocktailList({drinks, selectedDrink, handleAddToFavourites, handleDetailView, closeDetailView}) {
   
 
     // const [selectedDrink, setSelectedDrink] = useState(null)
@@ -27,7 +27,6 @@ function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handl
     //     setSelectedDrink(null);
 
     // }
-console.log(selectedDrink)
     return (
         <div className="body">
             <ul>
@@ -36,7 +35,6 @@ console.log(selectedDrink)
                     <CocktailItem
                     key={drink.id}
                     drink={drink}
-                    // setDrinks={setDrinks}
                     handleDetailView={handleDetailView}
                     />
                 ))}
@@ -57,15 +55,4 @@ console.log(selectedDrink)
 export default CocktailList;
 
 
- {/* <Outlet context={drinks}/>
-                {drinksList} */}
-
-  // const drinks = useOutletContext();
-    // const drinksList = drinks.map((drink) => (
-    //     <CocktailItem
-    //                 key={drink.id}
-    //                 drink={drink}
-    //                 setDrinks={setDrinks}
-    //                 onClick={() => handleDetailView(drink)}
-    //                 />
-    // ))
+ 

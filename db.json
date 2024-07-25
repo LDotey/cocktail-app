@@ -113,46 +113,10 @@
       "Ingredient5": "1 oz Fresh Orange Juice"
     },
     {
-      "id": "10",
+      "id": "87b7",
       "Favourited": false,
       "Name": "paloma",
-      "Glass": "cocktail ",
-      "Instructions": "",
-      "Ingredient1": "",
-      "Ingredient2": "",
-      "Ingredient3": "",
-      "Ingredient4": "",
-      "Ingredient5": ""
-    },
-    {
-      "id": "11",
-      "Favourited": false,
-      "Name": "margarita",
-      "Glass": "Rock Glass",
-      "Instructions": "",
-      "Ingredient1": "",
-      "Ingredient2": "",
-      "Ingredient3": "",
-      "Ingredient4": "",
-      "Ingredient5": ""
-    },
-    {
-      "id": "12",
-      "Favourited": false,
-      "Name": "michelada",
-      "Glass": "pint glass",
-      "Instructions": "",
-      "Ingredient1": "",
-      "Ingredient2": "",
-      "Ingredient3": "",
-      "Ingredient4": "",
-      "Ingredient5": ""
-    },
-    {
-      "id": "7505",
-      "Favourited": false,
-      "Name": "sour",
-      "Glass": "shot glass",
+      "Glass": "",
       "Instructions": "",
       "Ingredient1": "",
       "Ingredient2": "",

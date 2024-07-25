@@ -1,28 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client'
 
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById("root")
-);
-// const router = createBrowserRouter(routes)
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<RouterProvider router={router}/>
-  // <React.StrictMode>
-  //   <App />
-//   // </React.StrictMode>
+// ReactDOM.render(
+//   <BrowserRouter >
+//     <App />
+//   </BrowserRouter>,
+//   document.getElementById("root")
 // );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(
+  <BrowserRouter >
+    <App />
+  </BrowserRouter>
+);
+
+
+
+// const router = createBrowserRouter(routes)
+
+
+
+
 
 // import React from "react";
 // import ReactDOM from "react-dom";

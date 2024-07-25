@@ -1,7 +1,7 @@
 import React from "react";
 
 function CocktailItem ({drink, handleDetailView}) {
-   console.log(drink, handleDetailView)
+//    console.log(drink, handleDetailView)
 
 return (
     <ul onClick={() => {handleDetailView(drink)}}>
