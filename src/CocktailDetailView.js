@@ -1,6 +1,7 @@
 import React from "react";
 
 function CocktailDetailView ({drink, onClose, onAddToFavourites}) {
+    console.log(drink)
     return (
         <div className="detail-view">
             <div className="detail-view-content">

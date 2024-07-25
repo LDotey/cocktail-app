@@ -1,8 +1,9 @@
 import React from "react";
 import CocktailItem from "./CocktailItem";
+import CocktailDetailView from "./CocktailDetailView";
 
-function FavouritesList({drinks, setDrinks, handleDetailView}) {
-    console.log(handleDetailView)
+function FavouritesList({drinks, selectedDrink, handleDetailView, closeDetailView}) {
+    console.log(selectedDrink)
     const favouritedDrinks = drinks.filter(drink => drink.Favourited)
     return (
         <section className="favourites-view">
@@ -12,10 +13,18 @@ function FavouritesList({drinks, setDrinks, handleDetailView}) {
                     <CocktailItem
                     key={drink.id}
                     drink={drink}
-                    setDrinks={setDrinks}
-                    onClick={() => handleDetailView(drink)}/>
+                    // setDrinks={setDrinks}
+                    handleDetailView={handleDetailView}/>
+                    
                 ))}
             </ul>
+            {selectedDrink ?(
+                <CocktailDetailView
+                drink={selectedDrink}
+                onClose={closeDetailView}
+                
+                />
+            ): null}
         </section>
     )
 }

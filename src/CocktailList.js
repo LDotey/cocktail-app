@@ -2,19 +2,18 @@ import React, {useState} from "react";
 import CocktailItem from "./CocktailItem"
 import CocktailDetailView from "./CocktailDetailView"
 
-function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handleAddToFavourites}) {
+function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handleAddToFavourites, handleDetailView, closeDetailView}) {
   
-    console.log(drinks)
 
     // const [selectedDrink, setSelectedDrink] = useState(null)
 
-    function handleDetailView(drink) {
-        setSelectedDrink(drink);
-    }
+    // function handleDetailView(drink) {
+    //     setSelectedDrink(drink);
+    // }
     
-    function closeDetailView(){
-        setSelectedDrink(null);
-    }
+    // function closeDetailView(){
+    //     setSelectedDrink(null);
+    // }
 
     // function handleAddToFavourites(){
     //     setDrinks((prevDrinks) => {
@@ -28,7 +27,7 @@ function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handl
     //     setSelectedDrink(null);
 
     // }
-
+console.log(selectedDrink)
     return (
         <div className="body">
             <ul>
@@ -37,17 +36,17 @@ function CocktailList({drinks, setDrinks, selectedDrink, setSelectedDrink, handl
                     <CocktailItem
                     key={drink.id}
                     drink={drink}
-                    setDrinks={setDrinks}
-                    onClick={() => handleDetailView(drink)}
+                    // setDrinks={setDrinks}
+                    handleDetailView={handleDetailView}
                     />
                 ))}
             </ul>
-            {selectedDrink && (
+            {selectedDrink ? (
         <CocktailDetailView 
         drink={selectedDrink} 
         onClose={closeDetailView} 
         onAddToFavourites={handleAddToFavourites}/>
-      )}
+      ): null}
       
      
         </div>

@@ -30,6 +30,7 @@ function CocktailForm({drinks, setDrinks}) {
         // setDrinks([...drinks, newDrink])
 
         setFormData({
+            
             Favourited: false,
             Name: "",
             Glass: "",

@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   const [drinks, setDrinks] = useState([])
   const [selectedDrink, setSelectedDrink] = useState(null)
-
+console.log(selectedDrink)
   const [showFavourites, setShowFavourites] = useState(false)
   const [showForm, setShowForm] = useState()
 
@@ -36,6 +36,12 @@ function App() {
         setSelectedDrink(null);
 
     }
+    function handleDetailView(drink) {
+      setSelectedDrink(drink);
+    }
+    function closeDetailView(){
+      setSelectedDrink(null);
+  }
    
  
 
@@ -63,10 +69,23 @@ function App() {
         <CocktailList 
         drinks={drinks} 
         setDrinks={setDrinks} 
+        selectedDrink={selectedDrink}
+        setSelectedDrink={setSelectedDrink}
         handleAddToFavourites={handleAddToFavourites}
+        handleDetailView={handleDetailView}
+        closeDetailView={closeDetailView}
         />} />
-        <Route path="/favourites" element={<FavouritesList drinks={drinks} />} />
-        <Route path="/form" element={<CocktailForm drinks={drinks} setDrinks={setDrinks} />} />
+        <Route path="/favourites" element={
+        <FavouritesList 
+        drinks={drinks} 
+        selectedDrink={selectedDrink}
+        handleDetailView={handleDetailView}
+        closeDetailView={closeDetailView}
+        />} />
+        <Route path="/form" element={
+        <CocktailForm 
+        drinks={drinks} 
+        setDrinks={setDrinks} />} />
       </Routes>
     </div>
   );

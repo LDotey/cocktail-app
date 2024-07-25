@@ -6,7 +6,7 @@ function NavBar ({onFavouritesClick, onFormClick}) {
         
         <nav className="header">
             <NavLink
-            to="/" exact
+            to="/" 
             > </NavLink>
             
             <NavLink
