@@ -3,7 +3,7 @@ import CocktailItem from "./CocktailItem";
 import CocktailDetailView from "./CocktailDetailView";
 
 function FavouritesList({drinks, selectedDrink, handleDetailView, closeDetailView}) {
-    // console.log(selectedDrink)
+
     const favouritedDrinks = drinks.filter(drink => drink.Favourited)
     return (
         <section className="favourites-view">

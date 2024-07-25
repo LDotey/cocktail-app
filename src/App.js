@@ -5,23 +5,11 @@ import './App.css';
 import FavouritesList from './FavouritesList';
 import CocktailForm from './CocktailForm';
 import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
 
 function App() {
   const [drinks, setDrinks] = useState([])
   const [selectedDrink, setSelectedDrink] = useState(null)
-
-
-  // const [showFavourites, setShowFavourites] = useState(false)
-  // const [showForm, setShowForm] = useState()
-
-  // function toggleForm () {
-  //   setShowForm(prevShowForm => !prevShowForm)
-  // }
-
-  // function toggleFavourites () {
-  //   setShowFavourites (prevShowFavourites => !prevShowFavourites)
-  // }
-
 
   function handleAddToFavourites(){
         setDrinks((prevDrinks) => {
@@ -56,12 +44,10 @@ function App() {
     <div className="App">
       <header>
       <hr className='style'/>A B C Drinkie-poos<hr className='style'/>
-        <NavBar 
-          // onFavouritesClick={toggleFavourites} 
-          // onFormClick={toggleForm}
-        />
+        <NavBar />
       </header>
       <Routes>
+        <Route path="/" element={<Home/>}/>
         <Route path="/cocktails" element={
         <CocktailList 
         drinks={drinks} 
@@ -93,8 +79,19 @@ export default App;
 
 
 
+// ** these were passed to NavBar before routes were added to allow for toggling between components
+// onFavouritesClick={toggleFavourites} 
+          // onFormClick={toggleForm}
+            // const [showFavourites, setShowFavourites] = useState(false)
+  // const [showForm, setShowForm] = useState()
 
+  // function toggleForm () {
+  //   setShowForm(prevShowForm => !prevShowForm)
+  // }
 
+  // function toggleFavourites () {
+  //   setShowFavourites (prevShowFavourites => !prevShowFavourites)
+  // }
 
   // return (
   //   <>
