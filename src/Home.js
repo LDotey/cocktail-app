@@ -1,6 +1,6 @@
 function Home(){
     return (
-        <h1>Thirsty?</h1>
+        <h1 className="home">Thirsty?</h1>
     )
 }
 

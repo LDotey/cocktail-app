@@ -41,8 +41,8 @@ function App() {
   
   return (
     
-    <div className="App">
-      <header>
+    <div >
+      <header className="App">
       <hr className='style'/>A B C Drinkie-poos<hr className='style'/>
         <NavBar />
       </header>
