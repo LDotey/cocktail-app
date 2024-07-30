@@ -1,6 +1,6 @@
 import React from "react";
 
-function CocktailDetailView ({drink, onClose, onAddToFavourites}) {
+function CocktailDetailView ({drink, onClose, isFavourited, onToggleFavourites}) {
     // console.log(drink)
     return (
         <div className="detail-view">
@@ -14,7 +14,8 @@ function CocktailDetailView ({drink, onClose, onAddToFavourites}) {
                 <ul>{drink.Ingredient5 }</ul>
                 
                 <p>{drink.Instructions}</p>
-                <button onClick={onAddToFavourites}> 🥃 Add to Favourites 🥃 </button>
+                <button onClick={onToggleFavourites}> 
+                {isFavourited ? 'Remove from Favourites' : '🥃 Add to Favourites 🥃'} </button>
             </div>
         </div>
     )

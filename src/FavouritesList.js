@@ -2,7 +2,7 @@ import React from "react";
 import CocktailItem from "./CocktailItem";
 import CocktailDetailView from "./CocktailDetailView";
 
-function FavouritesList({drinks, selectedDrink, handleDetailView, closeDetailView}) {
+function FavouritesList({drinks, selectedDrink, handleDetailView, closeDetailView, handleToggleFavourites}) {
 
     const favouritedDrinks = drinks.filter(drink => drink.Favourited)
     return (
@@ -21,6 +21,8 @@ function FavouritesList({drinks, selectedDrink, handleDetailView, closeDetailVie
                 <CocktailDetailView
                 drink={selectedDrink}
                 onClose={closeDetailView}
+                isFavourited={selectedDrink.Favourited}
+                onToggleFavourites={handleToggleFavourites}
                 
                 />
             ): null}

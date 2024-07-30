@@ -2,7 +2,7 @@ import React from "react";
 import CocktailItem from "./CocktailItem"
 import CocktailDetailView from "./CocktailDetailView"
 
-function CocktailList({drinks, selectedDrink, handleAddToFavourites, handleDetailView, closeDetailView}) {
+function CocktailList({drinks, setDrinks, selectedDrink, handleToggleFavourites, handleDetailView, closeDetailView}) {
   
 
     // const [selectedDrink, setSelectedDrink] = useState(null)
@@ -43,7 +43,8 @@ function CocktailList({drinks, selectedDrink, handleAddToFavourites, handleDetai
         <CocktailDetailView 
         drink={selectedDrink} 
         onClose={closeDetailView} 
-        onAddToFavourites={handleAddToFavourites}/>
+        isFavourited={selectedDrink.Favourited}
+        onToggleFavourites={handleToggleFavourites}/>
       ): null}
       
      

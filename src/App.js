@@ -11,18 +11,32 @@ function App() {
   const [drinks, setDrinks] = useState([])
   const [selectedDrink, setSelectedDrink] = useState(null)
 
-  function handleAddToFavourites(){
-        setDrinks((prevDrinks) => {
-            return prevDrinks.map((drink) => {
-                if (drink.id === selectedDrink.id) {
-                    return {...drink, Favourited:true };
-                }
-                return drink;
-            });
-        });
-        setSelectedDrink(null);
+  function handleToggleFavourites() {
+    if (selectedDrink) {
+      setDrinks((prevDrinks) => {
+        return prevDrinks.map((drink) => {
+          if (drink.id === selectedDrink.id) {
+            return { ...drink, Favourited: !drink.Favourited};
+          }
+          return drink;
+      });
+    });
+    setSelectedDrink((prev) => (prev ? { ...prev, Favourited: !prev.Fvourited} : null))
+  }
+}
 
-    }
+  // function handleAddToFavourites(){
+  //       setDrinks((prevDrinks) => {
+  //           return prevDrinks.map((drink) => {
+  //               if (drink.id === selectedDrink.id) {
+  //                   return {...drink, Favourited:true };
+  //               }
+  //               return drink;
+  //           });
+  //       });
+  //       setSelectedDrink(null);
+
+  //   }
     function handleDetailView(drink) {
       setSelectedDrink(drink);
     }
@@ -54,7 +68,7 @@ function App() {
         setDrinks={setDrinks} 
         selectedDrink={selectedDrink}
         setSelectedDrink={setSelectedDrink}
-        handleAddToFavourites={handleAddToFavourites}
+        handleToggleFavourites={handleToggleFavourites}
         handleDetailView={handleDetailView}
         closeDetailView={closeDetailView}
         />} />
@@ -64,6 +78,7 @@ function App() {
         selectedDrink={selectedDrink}
         handleDetailView={handleDetailView}
         closeDetailView={closeDetailView}
+        handleToggleFavourites={handleToggleFavourites}
         />} />
         <Route path="/form" element={
         <CocktailForm 
