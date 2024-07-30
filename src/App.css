@@ -13,6 +13,11 @@ body{
   color: gold;
 }
 
+.glasses {
+  background-image: URL();
+
+}
+
 .App {
   text-align: center;
   padding: 50px;
@@ -26,12 +31,22 @@ body{
 .home {
   display: flex;
   font-size:x-large;
-  text-align: center;
-  margin-top: 100px;
+  
+  font-style: oblique;
+  color: navy;
+  justify-content: center;
+  margin-top: 50px;
   margin-left: 0;
   margin-right: 0;
   background-color: deepskyblue;
   border: 0;
+}
+
+.emoji {
+  display: flex;
+  justify-content: center;
+  size: 1000px;
+  font-size: xxx-large;
 }
 
 .body {
