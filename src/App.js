@@ -25,6 +25,9 @@ function App() {
   }
 }
 
+// This was the previous function I used 
+// prior to refactoring to allow for handleToggleFavourites
+
   // function handleAddToFavourites(){
   //       setDrinks((prevDrinks) => {
   //           return prevDrinks.map((drink) => {
