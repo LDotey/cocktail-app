@@ -13,6 +13,11 @@ root.render(
 );
 
 
+
+
+
+
+  // The below code was refactored after routes were added.
 // import ReactDOM from 'react-dom';
 
 
@@ -25,9 +30,6 @@ root.render(
 
 
 // const router = createBrowserRouter(routes)
-
-
-
 
 
 // import React from "react";

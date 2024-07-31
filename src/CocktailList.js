@@ -5,28 +5,7 @@ import CocktailDetailView from "./CocktailDetailView"
 function CocktailList({drinks, setDrinks, selectedDrink, handleToggleFavourites, handleDetailView, closeDetailView}) {
   
 
-    // const [selectedDrink, setSelectedDrink] = useState(null)
-
-    // function handleDetailView(drink) {
-    //     setSelectedDrink(drink);
-    // }
-    
-    // function closeDetailView(){
-    //     setSelectedDrink(null);
-    // }
-
-    // function handleAddToFavourites(){
-    //     setDrinks((prevDrinks) => {
-    //         return prevDrinks.map((drink) => {
-    //             if (drink.id === selectedDrink.id) {
-    //                 return {...drink, Favourited:true };
-    //             }
-    //             return drink;
-    //         });
-    //     });
-    //     setSelectedDrink(null);
-
-    // }
+  
     return (
         <div className="body">
             <ul>
@@ -55,5 +34,31 @@ function CocktailList({drinks, setDrinks, selectedDrink, handleToggleFavourites,
 
 export default CocktailList;
 
+
+
+
+            // This code moved to App to allow the function to be passed more thoroughly throughout the app. 
+  // const [selectedDrink, setSelectedDrink] = useState(null)
+
+    // function handleDetailView(drink) {
+    //     setSelectedDrink(drink);
+    // }
+    
+    // function closeDetailView(){
+    //     setSelectedDrink(null);
+    // }
+
+    // function handleAddToFavourites(){
+    //     setDrinks((prevDrinks) => {
+    //         return prevDrinks.map((drink) => {
+    //             if (drink.id === selectedDrink.id) {
+    //                 return {...drink, Favourited:true };
+    //             }
+    //             return drink;
+    //         });
+    //     });
+    //     setSelectedDrink(null);
+
+    // }
 
  
