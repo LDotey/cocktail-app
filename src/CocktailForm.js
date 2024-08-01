@@ -20,13 +20,6 @@ function CocktailForm({ drinks, setDrinks }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    // const newId = (drinks.length +1).toString()
-
-    // const newDrink = {...formData, }
-    // console.log(newDrink)
-
-    // setDrinks([...drinks, newDrink])
-
     setFormData({
       Favourited: false,
       Name: "",

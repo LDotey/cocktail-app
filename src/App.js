@@ -27,21 +27,6 @@ function App() {
     }
   }
 
-  // This was the previous function I used
-  // prior to refactoring to allow for handleToggleFavourites
-
-  // function handleAddToFavourites(){
-  //       setDrinks((prevDrinks) => {
-  //           return prevDrinks.map((drink) => {
-  //               if (drink.id === selectedDrink.id) {
-  //                   return {...drink, Favourited:true };
-  //               }
-  //               return drink;
-  //           });
-  //       });
-  //       setSelectedDrink(null);
-
-  //   }
   function handleDetailView(drink) {
     setSelectedDrink(drink);
   }
@@ -101,42 +86,3 @@ function App() {
 }
 
 export default App;
-
-// ** these were passed to NavBar before routes were added to allow for toggling between components
-// onFavouritesClick={toggleFavourites}
-// onFormClick={toggleForm}
-// const [showFavourites, setShowFavourites] = useState(false)
-// const [showForm, setShowForm] = useState()
-
-// function toggleForm () {
-//   setShowForm(prevShowForm => !prevShowForm)
-// }
-
-// function toggleFavourites () {
-//   setShowFavourites (prevShowFavourites => !prevShowFavourites)
-// }
-
-// return (
-//   <>
-//   <header>
-//     <NavBar/>
-//   </header>
-//   <Outlet context={drinks}/>
-
-//   </>
-
-// <div >
-//   <NavBar
-//   onFavouritesClick={toggleFavourites}
-//   onFormClick={toggleForm}/>
-//   <CocktailList
-//   drinks={drinks}
-//   setDrinks={setDrinks}
-//   />
-//   {showFavourites && <FavouritesList drinks={drinks}/>}
-//   {showForm && <CocktailForm drinks={drinks} setDrinks={setDrinks}/>}
-// </div>
-//   );
-// }
-
-// export default App;
