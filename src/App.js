@@ -22,7 +22,7 @@ function App() {
         });
       });
       setSelectedDrink((prev) =>
-        prev ? { ...prev, Favourited: !prev.Fvourited } : null
+        prev ? { ...prev, Favourited: !prev.Favourited } : null
       );
     }
   }
